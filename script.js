@@ -9,11 +9,11 @@ const personaMovieDB = {
 };
 
 const a = prompt('Один из последних просмотренных фильмов?', ""),
-      b = prompt('На сколько оцените его?', "");
-      c = prompt("Whos of actor you like mostly?", '');
+      b = prompt('На сколько оцените его?', ""),
+      c = prompt("Whos of actor you like mostly?", ''),
       d = prompt('How would you rate him?', '');
 
-personalMovieDB.movies[a] = b;
-personalMovieDB.movies[c] = d;
+personaMovieDB.movies[a] = b;
+personaMovieDB.movies[c] = d;
 
 console.log(personaMovieDB);
