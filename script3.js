@@ -55,3 +55,17 @@ function showMyDB (hidden) {
 }
 showMyDB(personaMovieDB.private);
 
+/* function writeYourGenres () {
+    for (let i = 1; i <= 3; i++){
+        const genre = prompt('Ваш любимый жанр под номером ${i}');
+        personaMovieDB.genre [i - 1] = genre;
+    }
+}
+writeYourGenres();  */
+
+function writeYourGenres () {
+    for (let i = 1; i <= 3; i++) {
+    personaMovieDB.genres [i - 1] = prompt('Ваш любимый жанр под номером ${i}');
+    }
+}
+writeYourGenres();
