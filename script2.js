@@ -1,5 +1,5 @@
-"use strict"; 
- 
+ "use strict"; 
+/*  
 function showFirstMessage (jepa){
     console.log(jepa);
 }
@@ -11,4 +11,9 @@ function ret () {
 }
 
 const anotherNum = ret ();
-console.log(anotherNum);
+console.log(anotherNum); 
+
+
+ */
+/* alert('23'[1]);  */
+console.log(typeof([] + 1 + 2));

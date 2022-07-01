@@ -1,5 +1,5 @@
 "use strict";
- 
+/*  
 const jepa = {
     name: 'test',
     width: 90,
@@ -12,7 +12,7 @@ const jepa = {
 console.log(Object.keys(jepa).length);
 
 const {border, bg} = jepa.colors; 
-console.log(border);
+console.log(border); //выводим значение ключа как значение переменной */
 
 /* let counter = 0;
 for (let key in jepa) {
@@ -27,3 +27,5 @@ for (let key in jepa) {
     }
 }
 console.log(counter); */
+
+console.dir([1, 2, 3]);

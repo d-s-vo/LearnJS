@@ -39,13 +39,17 @@ let personalMovieDB = {
       for (let i = 1; i <= 2; i++) {
         let genre = prompt(`Ваш любимый жанр под номером ${i}`);
         if (genre == '' || genre == null){
-          i--;
           console.log('не верно введены значения');
+          i--;
+        } else{
+          personalMovieDB.genres [i - 1] = genre;
         }
-      personalMovieDB.genres [i - 1] = console.log(`Любимый жанр ${i} - это ${genre}`);
+        personalMovieDB.genres.forEach((item, i) => {
+         console.log(`Любимый жанр ${i + 1} - это ${item}`);
+        });
         }
         },
-    showMyDB: function(hiden) {
+    showMyDB: function(hiden) { 
       if(!hiden){
          console.log(personalMovieDB.privat);
         } 
@@ -53,7 +57,7 @@ let personalMovieDB = {
     toggleVisibleMyDB: function(){
       if (personalMovieDB.privat){
            personalMovieDB.privat = false;
-        } else {
+      } else {
            personalMovieDB.privat = true;
       }
       },  
