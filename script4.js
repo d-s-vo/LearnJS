@@ -28,4 +28,3 @@ for (let key in jepa) {
 }
 console.log(counter); */
 
-console.dir([1, 2, 3]);
