@@ -1,19 +1,37 @@
- "use strict"; 
-/*  
-function showFirstMessage (jepa){
-    console.log(jepa);
-}
-showFirstMessage('Hello, DUDES!');
+"use strict";
 
-function ret () {
-    let num = 50;
-    return num;
-}
+const btns = document.querySelectorAll('button'),
+      wrapper = document.querySelector(".btn-block");
+const list = document.createElement('ul'),
+      info = document.createElement('p');
 
-const anotherNum = ret ();
-console.log(anotherNum); 
+info.textContent = "Я заебался уже сегодня тыкать в ебучий код чтобы кнопки заработали";     
 
+document.body.appendChild(info); 
+document.body.appendChild(list);     
 
- */
-/* alert('23'[1]);  */
-console.log(typeof([] + 1 + 2));
+wrapper.addEventListener('click', (e) => {
+  console.log('fuckYou');
+
+  e.preventDefault();
+  
+  if(e.target && e.target.tagName == "BUTTON") {
+    for (let i = 0; i < 1; ++i){
+          const listItem = document.createElement('li');
+          const listContent = prompt('What content do you want  the list item to have?');
+          listItem.textContent = listContent;
+           if (listContent != '' && listContent != null){
+              list.appendChild(listItem);
+           }else{
+             i--;
+           }
+          listItem.onclick = function (e) {
+            e.stopPropagation();
+            const listContent = prompt('Enter new content for your list item');
+            this.textContent = listContent;
+           };
+         }
+        }  
+    
+
+});

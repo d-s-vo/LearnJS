@@ -12,3 +12,14 @@ ul {
 li {
   margin-left: 20px;
 }
+
+.button1 {
+  background-color: gold;
+  font-size: 10px;
+  outline: none;
+  border-radius: 7px;
+}
+ 
+.image {
+  font-size: 60px;
+}
