@@ -7,13 +7,16 @@ const list = document.createElement('ul'),
 
 info.textContent = "Я заебался уже сегодня тыкать в ебучий код чтобы кнопки заработали";     
 
-document.body.appendChild(info); 
-document.body.appendChild(list);
+/* document.body.appendChild(info); 
+document.body.appendChild(list); */
 
+const nodeLi = document.createElement('li');
 const brtn = document.createElement('button');
 brtn.classList.add('button1');
 brtn.textContent = 'enter please';
-wrapper.prepend(brtn);
+nodeLi.appendChild(brtn);
+wrapper.prepend(nodeLi);
+wrapper.prepend(info);
 
 wrapper.addEventListener('click', (e) => {
   console.log('fuckYou');
@@ -26,7 +29,7 @@ wrapper.addEventListener('click', (e) => {
           const listContent = prompt('What content do you want  the list item to have?');
           listItem.textContent = listContent;
            if (listContent != '' && listContent != null){
-              list.appendChild(listItem);
+              wrapper.appendChild(listItem);
            }else{
              i--;
            }
