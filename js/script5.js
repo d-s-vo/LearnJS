@@ -4,7 +4,7 @@ const btns = document.querySelectorAll('button'),
       wrapper = document.querySelector(".btn-block");
 const list = document.createElement('ul'),
       info = document.createElement('p');
-const tabPic = document.querySelectorAll('.divImage'),
+const tabPic = document.querySelectorAll('.imageButton'),
       tabWord = document.querySelectorAll('.ulPicture'),
       tabParent = document.querySelector('.conteiner');
 
@@ -52,21 +52,21 @@ wrapper.addEventListener('click', (e) => {
 function hideTabContent () {
   tabPic.forEach (pic => {
    pic.classList.add('hide');
+   pic.classList.remove('show');
   });
   tabWord.forEach (word => {
-    tabWord.classList.remove('ulPicture_item_active');
+    word.classList.remove('ulPicture_item_active');
   });
 }
 
-hideTabContent();
-
 function showTabContent (i = 0) {
   tabPic[i].classList.add('show');
+  tabPic[i].classList.remove('hide');
   tabWord[i].classList.add('ulPicture_item_active');
 } 
 
-
-showTabContent(2); 
+hideTabContent();
+showTabContent();
 
 tabParent.addEventListener ('click', (e) => {
  const target = e.target;
