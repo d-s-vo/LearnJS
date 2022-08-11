@@ -10,9 +10,6 @@ const tabPic = document.querySelectorAll('.imageButton'),
 
 info.textContent = "Я заебался уже сегодня тыкать в ебучий код чтобы кнопки заработали";     
 
-/* document.body.appendChild(info); 
-document.body.appendChild(list); */
-
 
 const brtn = document.createElement('button');
 brtn.classList.add('button1');
