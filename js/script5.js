@@ -78,6 +78,68 @@ tabParent.addEventListener ('click', (e) => {
  
 });
 
+/* анимация с использованием setInterval и setTimeout */
+
+const animationBtn = document.querySelector('.anButton');
+let timerId,
+    elem;
+
+/* function firstAnimation () {
+  const elem = document.querySelector('.anObj');
+  let positionObj = 0;
+  
+  const timerId = setInterval (farme, 10);
+ 
+  function farme () {
+
+    const elemTop = elem.style.top,
+          elemLeft = elem.style.left;
+
+    if (elemTop === '355px' || elemLeft === '600px') {
+      clearInterval(timerId);
+    }else{
+      positionObj ++;
+      elem.style.top = positionObj + 'px';
+      elem.style.left = positionObj + 'px';
+    }
+  }
+
+} */
+
+function firstAnimation() {
+  let positionObj = 0;
+  const elem = document.querySelector(".anObj");
+
+  const timerId = setInterval(farme, 10),
+        tumerId = setInterval(farme, 10);
+
+  function farme() {
+    const elemTop = elem.style.top,
+      elemLeft = elem.style.left;
+    const elemOffset = elem.getBoundingClientRect().width / 2;  
+
+    console.log({
+      elemTop,
+      elemLeft,
+      positionObj
+    });
+
+    if (elemTop === "355px" || elemLeft === "680px") {
+      clearInterval(timerId);
+    } else {
+      positionObj++;
+      elem.style.top = positionObj + "px";
+      elem.style.left = positionObj / 4 + "%";
+    }
+  }
+}
+
+animationBtn.addEventListener ('click', firstAnimation);
+
+const field = document.querySelector('.anField');
+console.log(field.offsetWidth);
+console.log(field.offsetHeight);/* узнал ширину и высоту поля */
+
 
 
 
