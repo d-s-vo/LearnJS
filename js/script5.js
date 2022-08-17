@@ -71,7 +71,7 @@ tabParent.addEventListener ('click', (e) => {
    tabWord.forEach((item, i) => {
      if(target == item) {
       hideTabContent();
-      showTabContent(i);
+      showTabContent(i);ан
      }
    });
  }
@@ -83,28 +83,6 @@ tabParent.addEventListener ('click', (e) => {
 const animationBtn = document.querySelector('.anButton');
 let timerId,
     elem;
-
-/* function firstAnimation () {
-  const elem = document.querySelector('.anObj');
-  let positionObj = 0;
-  
-  const timerId = setInterval (farme, 10);
- 
-  function farme () {
-
-    const elemTop = elem.style.top,
-          elemLeft = elem.style.left;
-
-    if (elemTop === '355px' || elemLeft === '600px') {
-      clearInterval(timerId);
-    }else{
-      positionObj ++;
-      elem.style.top = positionObj + 'px';
-      elem.style.left = positionObj + 'px';
-    }
-  }
-
-} */
 
 function firstAnimation() {
   let positionObj = 0;
@@ -136,9 +114,25 @@ function firstAnimation() {
 
 animationBtn.addEventListener ('click', firstAnimation);
 
+
+/* таймер обратного отсчета */
+
+const deadline = '2022-09-01';
+
+function getTimeRemaining (endtime) {
+  const t = Date.parse(endtime) - Date.parse(newDate.parse());
+}
+
+
+/* измерение размеров */
+
 const field = document.querySelector('.anField');
 console.log(field.offsetWidth);
 console.log(field.offsetHeight);/* узнал ширину и высоту поля */
+
+const hdr = document.querySelector('header');
+console.log(hdr.offsetWidth);
+console.log(hdr.offsetHeight);
 
 
 
