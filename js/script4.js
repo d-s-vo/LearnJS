@@ -28,3 +28,18 @@ for (let key in jepa) {
 }
 console.log(counter); */
 
+
+function Accumulator (chislo) {
+    this.value = chislo;
+    
+    this.read = function() {
+        this.value += +prompt('Сколько нужно добавить?', 0);
+      };
+    
+} 
+
+
+let accumulator = new Accumulator(1);
+accumulator.read();
+accumulator.read();
+alert(accumulator.value);

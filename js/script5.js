@@ -10,14 +10,14 @@ const tabPic = document.querySelectorAll('.imageButton'),
 
 info.textContent = "Я заебался уже сегодня тыкать в ебучий код чтобы кнопки заработали";     
 
-
+/* делегирование функций с родителя на все кнопуи + динамечаски созданная кнопка brtn */
 const brtn = document.createElement('button');
 brtn.classList.add('button1');
 brtn.textContent = 'choose';
 wrapper.prepend(info);
 wrapper.append(brtn);
 
-/* делегирование функций с родителя на все кнопуи + динамечаски созданная кнопка brtn */
+
 wrapper.addEventListener('click', (e) => {
   console.log('fuckYou');
 
@@ -71,7 +71,7 @@ tabParent.addEventListener ('click', (e) => {
    tabWord.forEach((item, i) => {
      if(target == item) {
       hideTabContent();
-      showTabContent(i);ан
+      showTabContent(i);
      }
    });
  }
