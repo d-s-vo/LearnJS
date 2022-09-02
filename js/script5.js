@@ -117,14 +117,12 @@ animationBtn.addEventListener ('click', firstAnimation);
 
 /* таймер обратного отсчета */
 
-const deadline = '2022-09-01';
-
 function getTimeRemaining (endtime) {
-  const t = Date.parse(endtime) - Date.parse(new Date()),
-        days = Math.floor (t / (1000 * 60 * 60 * 24)),
-        hours = Math.floor ((t / (1000 * 60 * 60)) % 24 ),
-        minutes = Math.floor ((t / (1000 * 60)) % 60),
-        seconds = Math.floor ((t / 1000) % 60);
+  const t = Date.parse(new Date()),
+        days = new Date().getDate(),
+        hours =  new Date().getHours(),
+        minutes = new Date().getMinutes(),
+        seconds = new Date().getSeconds();
   
   return {
     'total': t,
@@ -148,6 +146,10 @@ function setClock (selector, endtime) {
   
     const t = getTimeRemaining (endtime);
 
+    if (t.total <= 0){
+      clearInterval(timeInterval);
+    }
+
     function getZero (num) {
       if (num >= 0 && num < 10){
         return`0${num}`;
@@ -160,13 +162,11 @@ function setClock (selector, endtime) {
     minutes.innerHTML = getZero(t.minutes);
     seconds.innerHTML = getZero(t.seconds);
 
-    if (t.total <= 0){
-      clearInterval(timeInterval);
-    }
+   
   }
 }
 
-setClock('.timer', deadline);
+setClock('.timer', 1000);
 
 /* измерение размеров */
 
