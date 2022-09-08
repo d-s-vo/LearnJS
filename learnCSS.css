@@ -51,7 +51,11 @@ header {
   text-align:center;
   width: 60px;
   margin-bottom: 10px;
+  overflow: scroll;
   
+}
+#days {
+  overflow: scroll;
 }
 #days,
 #hours,
