@@ -155,14 +155,18 @@ function setClock (selector, endtime) {
   const timer = document.querySelector(selector),
         date = timer.querySelector('.date'),
         time = timer.querySelector('.time'),
-        t = getTimeRemaining(endtime);      
+        recalcTime = setInterval(updateClock, 1000);
+  updateClock();
 
-  function getZero (num) {
-    if (num >= 0 && num < 10){return`0${num}`;
-    }else{return(num);}
-  }
-  date.innerHTML = getZero(t.days) + t.month;
-  time.innerHTML = `${getZero(t.hours)} : ${getZero(t.minutes)} : ${getZero(t.seconds)}`;
+    function updateClock () {
+    const t = getTimeRemaining(endtime);
+    function getZero (num) {
+      if (num >= 0 && num < 10){return`0${num}`;
+      }else{return(num);}
+    }
+    date.innerHTML = getZero(t.days) + t.month;
+    time.innerHTML = `${getZero(t.hours)} : ${getZero(t.minutes)} : ${getZero(t.seconds)}`;
+    }
 }
 
 setClock ('.timer-conteiner', 1000);
