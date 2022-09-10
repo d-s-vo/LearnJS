@@ -115,8 +115,59 @@ function firstAnimation() {
 animationBtn.addEventListener ('click', firstAnimation);
 
 
-/* таймер обратного отсчета */
+/* текущее вермя и дата */
 
+function getTimeRemaining (endtime) {
+  const t = Date.parse(new Date()),
+        days = new Date().getDate(),
+        hours =  new Date().getHours(),
+        minutes = new Date().getMinutes(),
+        seconds = new Date().getSeconds();
+  let month = new Date().getMonth();
+        
+  switch (month)
+        {
+          case 0: month="января"; break;
+          case 1: month="февраля"; break;
+          case 2: month="марта"; break;
+          case 3: month="апреля"; break;
+          case 4: month="мае"; break;
+          case 5: month="июня"; break;
+          case 6: month="июля"; break;
+          case 7: month="августа"; break;
+          case 8: month="сентября"; break;
+          case 9: month="октября"; break;
+          case 10: month="ноября"; break;
+          case 11: month="декабря"; break;
+        }      
+  
+  return {
+    'total': t,
+    'month': month,
+    'days': days,
+    'hours': hours,
+    'minutes': minutes,
+    'seconds': seconds 
+  };      
+}
+
+function setClock (selector, endtime) {
+  const timer = document.querySelector(selector),
+        date = timer.querySelector('.date'),
+        time = timer.querySelector('.time'),
+        t = getTimeRemaining(endtime);      
+
+  function getZero (num) {
+    if (num >= 0 && num < 10){return`0${num}`;
+    }else{return(num);}
+  }
+  date.innerHTML = getZero(t.days) + t.month;
+  time.innerHTML = `${getZero(t.hours)} : ${getZero(t.minutes)} : ${getZero(t.seconds)}`;
+}
+
+setClock ('.timer-conteiner', 1000);
+
+/* 
 function getTimeRemaining (endtime) {
   const t = Date.parse(new Date()),
         days = new Date().getDate(),
@@ -166,7 +217,7 @@ function setClock (selector, endtime) {
   }
 }
 
-setClock('.timer', 1000);
+setClock('.timer', 1000); */
 
 /* измерение размеров */
 
