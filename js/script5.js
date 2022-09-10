@@ -171,7 +171,28 @@ function setClock (selector, endtime) {
 
 setClock ('.timer-conteiner', 1000);
 
-/* 
+
+
+/* измерение размеров */
+
+const field = document.querySelector('.anField');
+console.log(field.offsetWidth);
+console.log(field.offsetHeight);/* узнал ширину и высоту поля */
+
+const hdr = document.querySelector('header');
+console.log(hdr.offsetWidth);
+console.log(hdr.offsetHeight);
+
+console.log(5 % 3);
+
+
+
+
+
+
+
+
+/*  таймер обратного отсчета в котором значения передаются в 4 разных спана
 function getTimeRemaining (endtime) {
   const t = Date.parse(new Date()),
         days = new Date().getDate(),
@@ -222,27 +243,6 @@ function setClock (selector, endtime) {
 }
 
 setClock('.timer', 1000); */
-
-/* измерение размеров */
-
-const field = document.querySelector('.anField');
-console.log(field.offsetWidth);
-console.log(field.offsetHeight);/* узнал ширину и высоту поля */
-
-const hdr = document.querySelector('header');
-console.log(hdr.offsetWidth);
-console.log(hdr.offsetHeight);
-
-console.log(5 % 3);
-
-
-
-
-
-
-
-
-
 
 
 

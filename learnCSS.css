@@ -44,34 +44,6 @@ header .h1 {
   color:aquamarine;
   margin: 5%;
 }
-/* .timer {
-  display:flex;
-  justify-content:space-between;
-  margin: 1px 7px;
-}
-.timer-block {
-  background:#fff;
-  box-shadow:0 4px 20px rgba(0,0,0,.25);
-  font-size:16px;
-  font-weight:300;
-  text-align:center;
-  width: 60px;
-  margin-bottom: 10px;
-  overflow: scroll;
-  
-}
-#days {
-  overflow: scroll;
-}
-#days,
-#hours,
-#minutes,
-#seconds {
-  font-size:26px;
-  font-weight:700;
-} */
-
-
 
 
 
