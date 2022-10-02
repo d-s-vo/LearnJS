@@ -13,13 +13,13 @@ info.textContent = "Я заебался уже сегодня тыкать в е
 /* делегирование функций с родителя на все кнопуи + динамечаски созданная кнопка brtn */
 const brtn = document.createElement('button');
 brtn.classList.add('button1');
-brtn.textContent = 'choose';
+brtn.textContent = 'js';
 wrapper.prepend(info);
 wrapper.append(brtn);
 
 
 wrapper.addEventListener('click', (e) => {
-  console.log('fuckYou');
+  console.log('');
 
   e.preventDefault();
   
